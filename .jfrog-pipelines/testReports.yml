@@ -29,9 +29,6 @@ pipelines:
             # - set_run_name $TOTAL_TESTS
             - npm run test
             - save_tests $res_testTrigger_resourcePath/
-            - add_cache_files $res_testTrigger_resourcePath/ vootla_cache_add_cache_files
-            - add_pipeline_files $res_testTrigger_resourcePath/ vootla_cache_add_pipeline_files
-            - add_run_files $res_testTrigger_resourcePath/ vootla_cache_add_run_files
       - name: no_test_reports
         type: Bash
         configuration:
@@ -72,6 +69,3 @@ pipelines:
             # - set_run_name $TOTAL_TESTS
             - npm run test
             - save_tests $res_testTrigger_resourcePath/
-            - add_cache_files $res_testTrigger_resourcePath/ vootla_cache_add_cache_files
-            - add_pipeline_files $res_testTrigger_resourcePath/ vootla_cache_add_pipeline_files
-            - add_run_files $res_testTrigger_resourcePath/ vootla_cache_add_run_files
