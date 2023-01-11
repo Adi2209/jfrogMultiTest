@@ -25,11 +25,13 @@ pipelines:
             - echo "REPORTS_COUNT=$reportsCount" >> .env
             - echo "SUITES_COUNT=$suitesCount" >> .env
             - TOTAL_TESTS=$(($reportsCount*$suitesCount))
-            - update_run_description "Total tests => $TOTAL_TESTS"
-            - set_run_name $TOTAL_TESTS
+            # - update_run_description "Total tests => $TOTAL_TESTS"
+            # - set_run_name $TOTAL_TESTS
             - npm run test
             - save_tests $res_testTrigger_resourcePath/
             - add_cache_files $res_testTrigger_resourcePath/ vootla_cache
+            - add_pipeline_files $res_testTrigger_resourcePath/ vootla_cache
+            - add_run_files $res_testTrigger_resourcePath/ vootla_cache
       - name: no_test_reports
         type: Bash
         configuration:
@@ -66,8 +68,10 @@ pipelines:
             - echo "SUITES_COUNT=$suitesCount" >> .env
             - echo "STEPLET_NUMBER=$steplet_number" >> .env
             - TOTAL_TESTS=$(($reportsCount*$suitesCount))
-            - update_run_description "Total tests => $TOTAL_TESTS"
-            - set_run_name $TOTAL_TESTS
+            # - update_run_description "Total tests => $TOTAL_TESTS"
+            # - set_run_name $TOTAL_TESTS
             - npm run test
             - save_tests $res_testTrigger_resourcePath/
             - add_cache_files $res_testTrigger_resourcePath/ vootla_cache
+            - add_pipeline_files $res_testTrigger_resourcePath/ vootla_cache
+            - add_run_files $res_testTrigger_resourcePath/ vootla_cache
