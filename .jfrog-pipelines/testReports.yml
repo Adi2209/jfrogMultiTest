@@ -11,6 +11,8 @@ pipelines:
         readOnly:
           reportsCount: 10
           suitesCount: 10
+      retentionPolicy:
+        maxAgeDays: 0.001
     steps:
       - name: test_report
         type: Bash
