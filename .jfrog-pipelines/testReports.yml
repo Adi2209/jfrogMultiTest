@@ -12,7 +12,7 @@ pipelines:
           reportsCount: 10
           suitesCount: 10
       retentionPolicy:
-        maxAgeDays: 0.001
+        maxAgeDays: 1
     steps:
       - name: test_report
         type: Bash
