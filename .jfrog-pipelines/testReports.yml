@@ -73,3 +73,4 @@ pipelines:
             # - set_run_name $TOTAL_TESTS
             - npm run test
             - save_tests $res_testTrigger_resourcePath/
+            - wc -l junit.xml
