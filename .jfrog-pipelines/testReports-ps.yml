@@ -1,33 +1,33 @@
-pipelines:
-  - name: test_reports_ps
-    configuration:
-      environmentVariables:
-        readOnly:
-          reportsCount: 10
-          suitesCount: 10
-    steps:
-      - name: test_report
-        type: PowerShell
-        configuration:
-          inputResources:
-            - name: testTrigger
-        execution:
-          onExecute:
-            # - pushd $res_testTrigger_resourcePath
-            # - npm install
-            # - touch .env
-            # - echo "REPORTS_COUNT=$reportsCount" >> .env
-            # - echo "SUITES_COUNT=$suitesCount" >> .env
-            # - TOTAL_TESTS=$(($reportsCount*$suitesCount))
-            # # - update_run_description "Total tests => $TOTAL_TESTS"
-            # # - set_run_name $TOTAL_TESTS
-            # - npm run test
-            - save_tests $res_testTrigger_resourcePath/
-      - name: no_test_reports
-        type: PowerShell
-        configuration:
-          inputSteps:
-            - name: test_report
-        execution:
-          onExecute:
-            - echo "done"
+# pipelines:
+#   - name: test_reports_ps
+#     configuration:
+#       environmentVariables:
+#         readOnly:
+#           reportsCount: 10
+#           suitesCount: 10
+#     steps:
+#       - name: test_report
+#         type: PowerShell
+#         configuration:
+#           inputResources:
+#             - name: testTrigger
+#         execution:
+#           onExecute:
+#             # - pushd $res_testTrigger_resourcePath
+#             # - npm install
+#             # - touch .env
+#             # - echo "REPORTS_COUNT=$reportsCount" >> .env
+#             # - echo "SUITES_COUNT=$suitesCount" >> .env
+#             # - TOTAL_TESTS=$(($reportsCount*$suitesCount))
+#             # # - update_run_description "Total tests => $TOTAL_TESTS"
+#             # # - set_run_name $TOTAL_TESTS
+#             # - npm run test
+#             - save_tests $res_testTrigger_resourcePath/
+#       - name: no_test_reports
+#         type: PowerShell
+#         configuration:
+#           inputSteps:
+#             - name: test_report
+#         execution:
+#           onExecute:
+#             - echo "done"
