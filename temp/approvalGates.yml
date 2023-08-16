@@ -13,27 +13,27 @@
 #         configuration:
 #           requiresApproval:
 #             approvers:
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #           inputSteps:
 #             - name: random_approval_test
 #         execution:
@@ -44,9 +44,9 @@
 #         configuration:
 #           requiresApproval:
 #             approvers:
-#               - vootlac
+#               - adityan
 #               - admin
-#               - vootlac
+#               - adityan
 #               - admin
 #           inputSteps:
 #             - name: specific_approval_test
