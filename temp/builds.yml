@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: int1
-      path: ChaitanyaVootla/jfrogMultiTest
+      path: adi2209/jfrogMultiTest
       branches:
         include: main
   - name: publish_buildInfo

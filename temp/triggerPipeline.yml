@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: git
-      path: ChaitanyaVootla/ymlTest
+      path: adityan/ymlTest
 pipelines:
   - name: trigger_pipeline
     steps:
